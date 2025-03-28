@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }) => {
     const [modalType, setModalType] = useState('error');
 
     const validUsername = 'Axel';
-    const validPassword = '123';
+    const validPassword = '12345678';
 
     const handleLogin = () => {
         if (username === '' || password === '') {

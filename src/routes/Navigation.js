@@ -8,9 +8,9 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import LoginScreen from '../screens/LoginScreen';
 import HistoryScreen from '../screens/HistoryScreen';
-import UpdateScreen from '../screens/UpdateScreen';
+import ValidExitScreen from '../screens/ValidExitScreen';
+import ValidVisitScreen from '../screens/ValidVisitScreen';
 import PasswordScreen from '../screens/PasswordScreen';
-
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -27,7 +27,6 @@ const Navigation = () => {
                         headerTitleAlign: 'center',
                     }}
                 />
-
                 <Stack.Screen
                     name="Password"
                     component={PasswordScreen}
@@ -48,9 +47,7 @@ const Navigation = () => {
                         headerTitleStyle: styles.headerTitleStyle,
                         headerTitleAlign: 'center',
                         headerLeft: () => (
-                            <TouchableOpacity onPress={() => console.log('Abrir menú')} style={styles.iconLeft}>
                                 <Ionicons name="menu" size={28} color="white" />
-                            </TouchableOpacity>
                         ),
                         headerRight: () => (
                             <TouchableOpacity
@@ -68,10 +65,10 @@ const Navigation = () => {
                         ),
                     })}
                 />
-
                 <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Profile' }} />
                 <Stack.Screen name="History" component={HistoryScreen} options={{ title: 'History' }} />
-                <Stack.Screen name="Update" component={UpdateScreen} options={{ title: 'Update' }} />
+                <Stack.Screen name="Visit" component={ValidVisitScreen} options={{ title: 'Validar Visita' }} />
+                <Stack.Screen name="Exit" component={ValidExitScreen} options={{ title: 'Validar Salida' }} />
             </Stack.Navigator>
         </NavigationContainer>
     );
